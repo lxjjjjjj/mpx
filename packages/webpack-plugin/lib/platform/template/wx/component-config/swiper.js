@@ -48,7 +48,7 @@ module.exports = function ({ print }) {
       },
       {
         test: /^(snap-to-edge)$/,
-        qa: ksPropLog
+        ks: ksPropLog
       }
     ],
     event: [

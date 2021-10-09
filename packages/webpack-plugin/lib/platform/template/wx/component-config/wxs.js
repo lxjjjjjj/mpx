@@ -25,6 +25,9 @@ module.exports = function ({ print }) {
     dd () {
       return 'dds'
     },
+    ks(){
+      return 'include'
+    },
     // 组件属性中的差异部分
     props: [
       {

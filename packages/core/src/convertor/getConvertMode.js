@@ -10,5 +10,6 @@ const convertModes = {
 }
 
 export function getConvertMode (srcMode) {
+  console.log('__mpx_mode__',__mpx_mode__)
   return convertModes[srcMode + '-' + __mpx_mode__]
 }

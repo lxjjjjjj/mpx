@@ -306,7 +306,7 @@ interface MpxConfig {
   setDataHandler: (data: object, target: ComponentIns<{}, {}, {}, {}, []>) => any | null
 }
 
-type SupportedMode = 'wx' | 'ali' | 'qq' | 'swan' | 'tt' | 'web' | 'qa'
+type SupportedMode = 'wx' | 'ali' | 'qq' | 'swan' | 'tt' | 'web' | 'qa' | 'ks'
 
 interface ImplementOptions {
   modes?: Array<SupportedMode>

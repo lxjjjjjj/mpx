@@ -1790,6 +1790,7 @@ function processClass (el, meta) {
 }
 
 function processStyle (el, meta) {
+  if(mode === 'ks') return
   const type = 'style'
   const targetType = el.tag.startsWith('th-') ? 'ex-' + type : type
   let dynamicStyle = getAndRemoveAttr(el, config[mode].directive.dynamicStyle).val

@@ -13,7 +13,7 @@ module.exports = function ({ print }) {
   const webEventLog = print({ platform: 'web', tag: TAG_NAME, isError: false, type: 'event' })
   const webValueLog = print({ platform: 'web', tag: TAG_NAME, isError: false, type: 'value' })
   const qaPropLog = print({ platform: 'qa', tag: TAG_NAME, isError: false })
-
+  const ksPropLog = print({ platform: 'ks', tag: TAG_NAME, isError: false })
   return {
     test: TAG_NAME,
     web (tag, { el }) {
@@ -64,6 +64,10 @@ module.exports = function ({ print }) {
       {
         test: /^(always-embed|bindkeyboardheightchange)$/,
         qa: qaPropLog
+      },
+      {
+        test: /^(placeholder-class|cursor-spacing|always-embed|cursor|selection-start|selection-end|safe-password-cert-path|safe-password-length|safe-password-time-stamp|safe-password-nonce|safe-password-salt|safe-password-custom-hash)$/,
+        jd: ksPropLog
       }
     ],
     event: [

@@ -183,6 +183,7 @@ export { watch, observable }
 function factory () {
   // 作为原型挂载属性的中间层
   function MPX () {
+    console.log('this',this)
     this.proto = extend({}, this)
   }
 

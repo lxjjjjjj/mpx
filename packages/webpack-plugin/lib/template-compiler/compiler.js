@@ -1214,7 +1214,6 @@ function processBindEvent (el, options) {
   const eventConfigMap = {}
   el.attrsList.forEach(function (attr) {
     let parsedEvent = config[mode].event.parseEvent(attr.name)
-
     if (parsedEvent) {
       let type = parsedEvent.eventName
       let modifiers = (parsedEvent.modifier || '').split('.')
@@ -1282,7 +1281,6 @@ function processBindEvent (el, options) {
       ])
     }
   }
-
   for (let type in eventConfigMap) {
     let needBind = false
     let { configs, rawName, proxy } = eventConfigMap[type]
@@ -1542,6 +1540,7 @@ function addWxsContent (meta, module, content) {
 }
 
 function postProcessWxs (el, meta) {
+  if(mode ==='ks') return
   if (el.tag === config[mode].wxs.tag) {
     let module = el.attrsMap[config[mode].wxs.module]
     if (module) {
@@ -1735,6 +1734,7 @@ function processText (el) {
 // }
 
 function injectWxs (meta, module, src) {
+  if(mode==='ks') return 
   if (addWxsModule(meta, module, src)) {
     return
   }
@@ -1752,6 +1752,7 @@ function injectWxs (meta, module, src) {
 }
 
 function processClass (el, meta) {
+  if(mode === 'ks') return
   const type = 'class'
   const needEx = el.tag.startsWith('th-')
   const targetType = needEx ? 'ex-' + type : type
@@ -1787,6 +1788,7 @@ function processClass (el, meta) {
 }
 
 function processStyle (el, meta) {
+  if(mode === 'ks') return
   const type = 'style'
   const targetType = el.tag.startsWith('th-') ? 'ex-' + type : type
   let dynamicStyle = getAndRemoveAttr(el, config[mode].directive.dynamicStyle).val
@@ -1809,7 +1811,8 @@ function processStyle (el, meta) {
 }
 
 function isRealNode (el) {
-  const virtualNodeTagMap = ['block', 'template', 'import', config[mode].wxs.tag].reduce((map, item) => {
+  const tagList = mode === 'ks'? ['block', 'template', 'import'] :['block', 'template', 'import', config[mode].wxs.tag]
+  const virtualNodeTagMap = tagList.reduce((map, item) => {
     map[item] = true
     return map
   }, {})
@@ -1976,7 +1979,7 @@ function postProcessTemplate (el) {
   }
 }
 
-const isValidMode = makeMap('wx,ali,swan,tt,qq,web,qa,jd,dd')
+const isValidMode = makeMap('wx,ali,swan,tt,qq,web,qa,jd,dd,ks')
 
 const wrapRE = /^\((.*)\)$/
 
@@ -2366,7 +2369,7 @@ function genFor (node) {
   node.forProcessed = true
   let index = node.for.index || 'index'
   let item = node.for.item || 'item'
-  return `this._i(${node.for.exp}, function(${item},${index}){\n${genNode(node)}});\n`
+  return `this.i(${node.for.exp}, function(${item},${index}){\n${genNode(node)}});\n`
 }
 
 function genNode (node) {

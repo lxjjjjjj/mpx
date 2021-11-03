@@ -13,6 +13,8 @@ export function clearInjectMixins () {
 }
 
 export function injectMixins (mixins, options = {}) {
+  console.log('mixins',mixins)
+  console.log('options',options)
   if (typeof options === 'string' || Array.isArray(options)) {
     options = {
       types: options

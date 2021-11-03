@@ -2,7 +2,7 @@ const path = require('path')
 const loaderUtils = require('loader-utils')
 const getMainCompilation = require('./utils/get-main-compilation')
 const toPosix = require('./utils/to-posix')
-
+const parseQuery = require('./utils/parse-request')
 module.exports = function loader (content, prevOptions) {
   const options = prevOptions || loaderUtils.getOptions(this) || {}
   const context = options.context || this.rootContext
@@ -37,8 +37,8 @@ module.exports = function loader (content, prevOptions) {
       }
     }).outputPath
   }
-
-  let publicPath = `__webpack_public_path__ + ${JSON.stringify(url)}`
+  const {queryObj} = parseQuery(this.resource)
+  let publicPath = options.mode === 'ks'&& queryObj?.currentName ==='app' ? JSON.stringify(url) :`__webpack_public_path__ + ${JSON.stringify(url)}`
 
   if (options.publicPath) {
     if (typeof options.publicPath === 'function') {

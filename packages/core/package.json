@@ -1,15 +1,41 @@
 {
-  "name": "@mpxjs/core",
-  "version": "2.6.101",
-  "description": "mpx runtime core",
-  "keywords": [
-    "miniprogram",
-    "mpx"
+  "_from": "@mpxjs/core@^2.6.94",
+  "_id": "@mpxjs/core@2.6.102",
+  "_inBundle": false,
+  "_integrity": "sha1-1Kd3BIGqvf1MLTMDSFsMaTzSvS0=",
+  "_location": "/@mpxjs/core",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@mpxjs/core@^2.6.94",
+    "name": "@mpxjs/core",
+    "escapedName": "@mpxjs%2fcore",
+    "scope": "@mpxjs",
+    "rawSpec": "^2.6.94",
+    "saveSpec": null,
+    "fetchSpec": "^2.6.94"
+  },
+  "_requiredBy": [
+    "/"
   ],
-  "author": "donghongping",
-  "license": "Apache",
-  "module": "src/index.js",
-  "types": "@types/index.d.ts",
+  "_resolved": "http://artifactory.intra.xiaojukeji.com/artifactory/api/npm/npm/@mpxjs/core/-/core-2.6.102.tgz?dl=https%3A%2F%2Frepo.huaweicloud.com%2Frepository%2Fnpm%2F%40mpxjs%2Fcore%2F-%2Fcore-2.6.102.tgz",
+  "_shasum": "d4a7770481aabdfd4c2d3303485b0c693cd2bd2d",
+  "_spec": "@mpxjs/core@^2.6.94",
+  "_where": "/Users/didi/Desktop/ksDemo/mpx-project",
+  "author": {
+    "name": "donghongping"
+  },
+  "bugs": {
+    "url": "https://github.com/didi/mpx/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash": "^4.1.1",
+    "miniprogram-api-typings": "^3.0.2"
+  },
+  "deprecated": false,
+  "description": "mpx runtime core",
   "directories": {
     "src": "src"
   },
@@ -17,10 +43,15 @@
     "src",
     "@types"
   ],
-  "dependencies": {
-    "lodash": "^4.1.1",
-    "miniprogram-api-typings": "^3.0.2"
-  },
+  "gitHead": "377633613e39511e147269e988e3459f50421de5",
+  "homepage": "https://didi.github.io/mpx/",
+  "keywords": [
+    "miniprogram",
+    "mpx"
+  ],
+  "license": "Apache",
+  "module": "src/index.js",
+  "name": "@mpxjs/core",
   "peerDependencies": {
     "vue": "^2.6.10",
     "vue-i18n": "^8.15.3"
@@ -28,16 +59,14 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/didi/mpx.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:didi/mpx.git"
-  },
-  "homepage": "https://didi.github.io/mpx/",
-  "bugs": {
-    "url": "https://github.com/didi/mpx/issues"
-  },
-  "sideEffects": false
+  "sideEffects": false,
+  "types": "@types/index.d.ts",
+  "version": "2.6.102"
 }

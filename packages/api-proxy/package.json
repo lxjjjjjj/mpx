@@ -1,45 +1,74 @@
 {
-  "name": "@mpxjs/api-proxy",
-  "version": "2.6.96",
-  "description": "convert miniprogram API at each end",
-  "module": "src/index.js",
-  "types": "@types/index.d.ts",
-  "sideEffects": [
-    "*.styl"
-  ],
-  "scripts": {
-    "test": "jest"
+  "_from": "@mpxjs/api-proxy@^2.6.80",
+  "_id": "@mpxjs/api-proxy@2.6.96",
+  "_inBundle": false,
+  "_integrity": "sha1-7qEC6tE9RiWZnAyAVMSpaEY1lqc=",
+  "_location": "/@mpxjs/api-proxy",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@mpxjs/api-proxy@^2.6.80",
+    "name": "@mpxjs/api-proxy",
+    "escapedName": "@mpxjs%2fapi-proxy",
+    "scope": "@mpxjs",
+    "rawSpec": "^2.6.80",
+    "saveSpec": null,
+    "fetchSpec": "^2.6.80"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://artifactory.intra.xiaojukeji.com/artifactory/api/npm/npm/@mpxjs/api-proxy/-/api-proxy-2.6.96.tgz?dl=https%3A%2F%2Frepo.huaweicloud.com%2Frepository%2Fnpm%2F%40mpxjs%2Fapi-proxy%2F-%2Fapi-proxy-2.6.96.tgz",
+  "_shasum": "eea102ead13d4625999c0c8054c4a968463596a7",
+  "_spec": "@mpxjs/api-proxy@^2.6.80",
+  "_where": "/Users/didi/Desktop/ksDemo/mpx-project",
+  "author": {
+    "name": "httpsxiao"
+  },
+  "bugs": {
+    "url": "https://github.com/didi/mpx/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "deprecated": false,
+  "description": "convert miniprogram API at each end",
   "files": [
     "src",
     "@types",
     "README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com/didi/mpx.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
-  },
+  "gitHead": "5aa3f8e4f249737f8901054ac3cba1de4a5ded68",
+  "homepage": "https://github.com/didi/mpx#readme",
   "keywords": [
     "api",
     "proxy",
     "web",
     "promise"
   ],
-  "author": "httpsxiao",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/didi/mpx/issues"
-  },
-  "homepage": "https://github.com/didi/mpx#readme",
+  "module": "src/index.js",
+  "name": "@mpxjs/api-proxy",
   "peerDependencies": {
     "@mpxjs/core": "^2.2.27",
     "miniprogram-api-typings": "^2.9.0"
   },
-  "dependencies": {
-    "axios": "^0.21.1"
-  }
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/didi/mpx.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "sideEffects": [
+    "*.styl"
+  ],
+  "types": "@types/index.d.ts",
+  "version": "2.6.96"
 }

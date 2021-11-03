@@ -1,19 +1,35 @@
 {
-  "name": "@mpxjs/webpack-plugin",
-  "version": "2.6.101",
-  "description": "mpx compile core",
-  "keywords": [
-    "mpx"
-  ],
-  "author": "donghongping",
-  "license": "Apache",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
+  "_from": "@mpxjs/webpack-plugin@^2.6.94",
+  "_id": "@mpxjs/webpack-plugin@2.6.102",
+  "_inBundle": false,
+  "_integrity": "sha1-WViTpxzDWMS9rwlVp6uuRrm3z2w=",
+  "_location": "/@mpxjs/webpack-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@mpxjs/webpack-plugin@^2.6.94",
+    "name": "@mpxjs/webpack-plugin",
+    "escapedName": "@mpxjs%2fwebpack-plugin",
+    "scope": "@mpxjs",
+    "rawSpec": "^2.6.94",
+    "saveSpec": null,
+    "fetchSpec": "^2.6.94"
   },
-  "files": [
-    "lib"
+  "_requiredBy": [
+    "#DEV:/"
   ],
+  "_resolved": "http://artifactory.intra.xiaojukeji.com/artifactory/api/npm/npm/@mpxjs/webpack-plugin/-/webpack-plugin-2.6.102.tgz?dl=https%3A%2F%2Frepo.huaweicloud.com%2Frepository%2Fnpm%2F%40mpxjs%2Fwebpack-plugin%2F-%2Fwebpack-plugin-2.6.102.tgz",
+  "_shasum": "595893a71cc358c4bdaf0955a7abae46b9b7cf6c",
+  "_spec": "@mpxjs/webpack-plugin@^2.6.94",
+  "_where": "/Users/didi/Desktop/ksDemo/mpx-project",
+  "author": {
+    "name": "donghongping"
+  },
+  "bugs": {
+    "url": "https://github.com/didi/mpx/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "@better-scroll/core": "^2.2.1",
     "@better-scroll/movable": "^2.2.1",
@@ -58,6 +74,26 @@
     "source-list-map": "^2.0.0",
     "webpack-sources": "^1.1.0"
   },
+  "deprecated": false,
+  "description": "mpx compile core",
+  "devDependencies": {
+    "@types/babel-traverse": "^6.25.4",
+    "@types/babel-types": "^7.0.4"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "gitHead": "377633613e39511e147269e988e3459f50421de5",
+  "homepage": "https://didi.github.io/mpx/",
+  "keywords": [
+    "mpx"
+  ],
+  "license": "Apache",
+  "main": "lib/index.js",
+  "name": "@mpxjs/webpack-plugin",
   "peerDependencies": {
     "css-loader": "^0.28.10",
     "webpack": "^4.0.0",
@@ -68,17 +104,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:didi/mpx.git"
-  },
-  "homepage": "https://didi.github.io/mpx/",
-  "bugs": {
-    "url": "https://github.com/didi/mpx/issues"
+    "url": "git+ssh://git@github.com/didi/mpx.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "devDependencies": {
-    "@types/babel-traverse": "^6.25.4",
-    "@types/babel-types": "^7.0.4"
-  }
+  "version": "2.6.102"
 }
